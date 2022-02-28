@@ -31,7 +31,7 @@ class Database
      */
     private function connect()
     {
-        if ($mysqli = new mysqli(ConfigDB::HOST, ConfigDB::USERNAME, ConfigDB::PASSWORD)) {
+        if ($mysqli = new mysqli(ConfigDB::HOST, ConfigDB::USERNAME, ConfigDB::PASSWORDc)) {
             $sql = "CREATE DATABASE IF NOT EXISTS `Libros` DEFAULT CHARACTER SET utf8 COLLATE 
     utf8_spanish_ci;";
             $mysqli->query($sql);

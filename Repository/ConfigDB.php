@@ -8,13 +8,15 @@ namespace Repository;
  */
 class ConfigDB
 {
+
     //CONFIG
-    public const HOST = 'heroku_88216c9d82a2500';
-    public const USERNAME = 'b336176d2bc7ea'; //root
-    public const PASSWORD = '1fbc7ac5'; //root
-    public const DB_NAME = 'libros'; //id18536218_libros
+    public const HOST = 'fdb32.awardspace.net';
+    public const USERNAME = '4049476_libros'; //root
+    public const PASSWORD = 'libros123'; //root
+    public const DB_NAME = '4049476_libros'; //id18536218_libros
     public const LIBRO = 'libro';
     public const AUTOR = 'autor';
+
 
     //CREATE
     public const CREATE_AUTHOR = "INSERT INTO " . ConfigDB::DB_NAME . '.' . ConfigDB::AUTOR . 'VALUES ';
@@ -51,6 +53,7 @@ class ConfigDB
     . " WHERE id = ";
 
     //OTHER
+
 
 
 }

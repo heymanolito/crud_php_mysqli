@@ -1,2 +1,2 @@
 # TAREA 6 DWES
-Despliegue: https://tarea06-54285506d.000webhostapp.com/
+Despliegue: http://tarea06-54285506d.atwebpages.com/tarea6/GestionLibros.php

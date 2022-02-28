@@ -20,7 +20,7 @@
     $tablaAutores = new AutorService();
 
 echo '<h3 style="text-align: center">' . 'Autores' . '</h3>';
-for ($i = 1; $i <= $tablaAutores->getSize() + 1; $i++) {
+for ($i = 1; $i <= $tablaAutores->getSize(); $i++) {
 
     echo '<div style="margin: 20px; 
                               padding: 20px;

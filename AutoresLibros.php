@@ -26,7 +26,7 @@ $tablaLibros = new LibroService();
 
 
 echo '<h3 style="text-align: center">' . 'Listado de Autores con sus libros publicados' . '</h3>';
-for ($i = 1; $i <= $tablaAutores->getSize() + 1; $i++) {
+for ($i = 1; $i <= $tablaAutores->getSize(); $i++) {
 
     echo '<div style="margin: 20px; 
                               padding: 20px;
@@ -34,6 +34,7 @@ for ($i = 1; $i <= $tablaAutores->getSize() + 1; $i++) {
     $tablaAutores->getAuthorById($i);
 
     $tablaLibros->getBooksByAuthorId($i);
+
     echo '<h6 style="text-align: right">' . $i . 'º' . ' resultado' . '</h6>';
 
     echo '</div>';

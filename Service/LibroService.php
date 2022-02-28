@@ -65,6 +65,19 @@ class LibroService
         }
     }
 
+    public function getBookById(int $id)
+    {
+        if ($id == null) {
+            $this->listAll();
+        } else if (!is_numeric($id)) {
+            return null;
+        }
+        else {
+            $result_set = $this->repository->getBookById($id);
+            $this->to_table($result_set);
+        }
+    }
+
     /**
      * @param int $id
      * @return void
@@ -90,20 +103,15 @@ class LibroService
      * @param bool|array|null $result_set
      * @return void
      */
-    public function to_table(bool|array|null $result_set): void
+    public function to_table($result_set): void
     {
         if($result_set!=null) {
             echo '<div style="margin: 20px; 
                               padding: 20px;
                               border: solid 2px black">';
             echo '<h3> ' . 'Libros publicados' . '</h3>';
-            $cabeceras = array("ID del libro", "Título", "Fecha de publicación", "ID del autor");
-            $i = 0;
-            foreach ($result_set as $result) {
-                echo '<tr>';
-                echo '<td>' . $cabeceras[$i] . ': ' . $result . '<br>' . '</td>';
-                echo '</tr>';
-                $i++;
+            while($row = mysqli_fetch_row($result_set)) {
+                echo '<td><li>' . $row[1] . '<br>' . '</li></td>';
             }
             echo '</div>';
         }

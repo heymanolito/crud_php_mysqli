@@ -59,17 +59,23 @@ class LibroRepository
      */
     public function getBooksByAuthorId($id)
     {
+
+        return $this->db->getConnection()->query(ConfigDB::GET_BOOK_BY_AUTHOR_ID . $id);
+
+
+    }
+
+    public function getBookById($id)
+    {
         if (is_numeric($id)) {
-            $result_set = $this->db->getConnection()->query(ConfigDB::GET_BOOK_BY_AUTHOR_ID . $id);
+            $result_set = $this->db->getConnection()->query(ConfigDB::GET_BOOK_BY_ID . $id);
         } else {
             return null;
         }
 
         return $result_set->fetch_assoc();
 
-
     }
-
     /**
      * @param int $id
      * @return bool

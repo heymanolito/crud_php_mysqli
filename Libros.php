@@ -18,16 +18,19 @@ require ('Service/LibroService.php');
 
 $tablaLibros = new LibroService();
 
-echo '<h3 style="text-align: center">' . 'Libros' . '</h3>';
-for ($i = 1; $i <= $tablaLibros->getSize() + 1; $i++) {
+    echo '<h3 style="text-align: center">' . 'Libros' . '</h3>';
+
+for ($i = 1; $i <= $tablaLibros->getSize(); $i++) {
 
     echo '<div style="margin: 20px; 
                               padding: 20px;
                               border: solid 2px black">';
-    $tablaLibros->getBooksByAuthorId($i);
+    $tablaLibros->getBookById($i);
 
     echo '</div>';
 }
+
+
 
 ?>
 

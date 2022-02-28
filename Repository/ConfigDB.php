@@ -9,9 +9,9 @@ namespace Repository;
 class ConfigDB
 {
     //CONFIG
-    public const HOST = 'localhost';
-    public const USERNAME = 'id18536218_admin'; //root
-    public const PASSWORD = '6)HTEe=(*tfgg@C{'; //root
+    public const HOST = 'heroku_88216c9d82a2500';
+    public const USERNAME = 'b336176d2bc7ea'; //root
+    public const PASSWORD = '1fbc7ac5'; //root
     public const DB_NAME = 'libros'; //id18536218_libros
     public const LIBRO = 'libro';
     public const AUTOR = 'autor';

@@ -10,10 +10,10 @@ class ConfigDB
 {
 
     //CONFIG
-    public const HOST = 'localhost'; // 'fdb32.awardspace.net'
-    public const USERNAME = 'root'; // '4049476_libros'
-    public const PASSWORD = ''; // 'libros123'
-    public const DB_NAME = 'libros'; //'4049476_libros'
+    public const HOST = 'fdb32.awardspace.net'; // 'fdb32.awardspace.net'
+    public const USERNAME = '4049476_libros'; // '4049476_libros'
+    public const PASSWORD = 'libros123'; // 'libros123'
+    public const DB_NAME = '4049476_libros'; //'4049476_libros'
     public const LIBRO = 'libro';
     public const AUTOR = 'autor';
 
@@ -31,7 +31,7 @@ class ConfigDB
     . ConfigDB::AUTOR
     . " WHERE id = ";
 
-    public const GET_BOOK_BY_AUTHOR_ID =  "SELECT titulo FROM "
+    public const GET_BOOK_BY_AUTHOR_ID =  "SELECT * FROM "
     . ConfigDB::DB_NAME . '.'
     . ConfigDB::LIBRO
     . " WHERE id_autor = ";

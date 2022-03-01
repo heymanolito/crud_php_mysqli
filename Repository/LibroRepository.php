@@ -67,15 +67,11 @@ class LibroRepository
 
     public function getBookById($id)
     {
-        if (is_numeric($id)) {
-            $result_set = $this->db->getConnection()->query(ConfigDB::GET_BOOK_BY_ID . $id);
-        } else {
-            return null;
-        }
 
-        return $result_set->fetch_assoc();
+        return $this->db->getConnection()->query(ConfigDB::GET_BOOK_BY_ID . $id);
 
     }
+
     /**
      * @param int $id
      * @return bool

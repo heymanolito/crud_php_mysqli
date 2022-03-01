@@ -92,15 +92,7 @@ class LibroService
     }
 
     /**
-     * @param int $id
-     * @return int
-     */
-    public function getBooksByAuthorIdSize(int $id): int {
-        return $this->getBooksByAuthorIdSize($id);
-    }
-
-    /**
-     * @param bool|array|null $result_set
+     * @param  $result_set
      * @return void
      */
     public function to_table($result_set): void

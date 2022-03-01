@@ -36,8 +36,10 @@ class Database
             echo '<script>console.log("Conexión establecida con la base de datos.")</script>';
             return $mysqli;
         }
+        echo '<script>console.log("No se ha podido establecer una conexión.")</script>';
         return null;
     }
+
 
     /**
      * @return mysqli|null
